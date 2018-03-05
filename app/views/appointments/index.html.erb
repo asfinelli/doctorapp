@@ -1,0 +1,6 @@
+
+<%= @appointment.each do |appointment| %>
+<%= appointment.user_id %>
+
+<%= link_to "Accept Appointment", edit_appointment_path(appointment.id) %>%>
+<% end %>

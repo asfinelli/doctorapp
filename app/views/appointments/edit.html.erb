@@ -1,0 +1,13 @@
+<%= form_for @appointment do |f| %>
+<p>
+
+
+
+<div class="field">
+  <%= f.label :doctor_id %><br />
+  <%= f.number_field :doctor_id, required: true, value: current_doctor.id %>
+</div>
+  <p>
+    <%= f.submit 'Confirm' %>
+  </p>
+<% end %>

@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-
   authenticated :user do
     root to: 'user_sessions#show'
   end
@@ -17,9 +16,9 @@ Rails.application.routes.draw do
 
   resources :user_sessions
 
-
   resources :doctor_sessions
 
+  resources :appointments
 
   root to: 'home#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
