@@ -17,14 +17,14 @@
 
 
 <div class="field">
-<%= f.label :gender %>
+<%= f.label :gender %><br />
 <%= f.text_field :gender, autofocus: true, required: true %>
 </div>
 
 
 <div class="field">
   <%= f.label :phone_number %><br />
-  <%= f.text_field :phone_number, autofocus: true, required: true %>
+  <%= f.phone_field :phone_number, autofocus: true, required: true %>
 </div>
 
 
@@ -39,7 +39,7 @@
   <%= f.text_field :city, autofocus: true, required: true %>
 </div>
 
-
+<div class="field">
 <%= f.label :state %></br>
 <select class="browser-default">
   <option class="state" value="" disabled selected>Choose your State</option>
@@ -93,7 +93,7 @@
   <option value="WI">Wisconsin</option>
   <option value="WY">Wyoming</option>
 </select>
-
+</div>
 
 <div class="field">
     <%= f.label :postal_code %><br />
@@ -351,7 +351,7 @@
     <option value="Zambia">Zambia</option>
     <option value="Zimbabwe">Zimbabwe</option>
     </select>
-</div>
+
 
 <div class="field">
   <%= f.label :email %><br />
