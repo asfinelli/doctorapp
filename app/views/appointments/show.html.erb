@@ -1,1 +1,20 @@
-<h1>this is where the video chat happens</h1>
+<iframe
+  src="https://tokbox.com/embed/embed/ot-embed.js?embedId=ae301120-4da4-498c-b9dc-9f27b033db49&room=<%= @appointment.id %>&iframe=true"
+  width=800
+  height=640
+  allow="microphone; camera"
+></iframe>
+<% if current_doctor %>
+<%= form_for @appointment do |f| %>
+
+<p>
+
+  <div class="follow-up">
+    <%= f.label :follow_up %>
+    <%= f.text_field :follow_up, required: true %>
+  </div>
+    <p>
+    <%= f.submit 'Confirm'%>
+  </p>
+<% end %>
+<% end %>

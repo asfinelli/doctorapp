@@ -34,7 +34,7 @@ class AppointmentsController < ApplicationController
 
 
   def update
-    appointment_params.merge(doctor_id: current_doctor)
+    appointment_params.merge(doctor_id: current_doctor
     if @appointment.update(appointment_params)
       redirect_to appointment_path(@appointment)
     else
