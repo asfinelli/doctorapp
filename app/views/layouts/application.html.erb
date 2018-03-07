@@ -9,9 +9,10 @@
 
   <title>Doctorapp</title>
 
-  <link href="/assets/application.scss" rel="stylesheet" media-"all" rel="stylesheet">
-  <link href="/assets/application.js">
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" %>
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
@@ -65,6 +66,16 @@
 
         </li>
         <% end %>
+        <% if current_user %>
+
+         <li><%= link_to "Inbox", mailbox_inbox_path %></li>
+
+         <% elsif current_doctor %>
+
+
+         <li><%= link_to "Inbox", mailbox_inbox_path %></li>
+         <% end %>
+
 
 
 
