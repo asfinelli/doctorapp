@@ -3,12 +3,12 @@
     <% if current_user %>
 
       <%= f.label :recipients %>
-      <%= f.select(:recipients, Doctor.all.collect {|p| [ p.username, p.id ] }, {}, { multiple: true , class: "choosen-select form-control" })%>
+      <%= f.select(:recipients, Doctor.all.collect {|p| [ p.username, p.id ] }, {}, { multiple: true , class: "chosen-select form-control" })%>
 
     <% elsif current_doctor %>
 
       <%= f.label :recipients %>
-      <%= f.select(:recipients, User.all.collect {|p| [ p.username, p.id ] }, {}, { multiple: true, class: "choosen form-control" })%>
+      <%= f.select(:recipients, User.all.collect {|p| [ p.username, p.id ] }, {}, { multiple: true, class: "chosen-select form-control" })%>
 
       <% end %>
       </div>
