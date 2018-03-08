@@ -1,8 +1,9 @@
-<%= link_to "new user", new_user_registration_path %>
-
-<%= link_to "user_login", new_user_session_path %>
-
-
-<%= link_to "new doctor", new_doctor_registration_path %>
-
-<%= link_to "user_login", new_doctor_session_path %>
+<div class="jumbotron">
+  <h1 class="display-4">DoctorApp</h1>
+  <p class="lead">Where you can see a doctor in flash</p>
+  <hr class="my-4">
+  <p>Join today to see what all the hype is about!</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" <%= link_to "New User", new_user_registration_path %></a>
+  </p>
+</div>

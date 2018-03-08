@@ -1,0 +1,57 @@
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+   <span class="icon-bar"></span>
+   <span class="icon-bar"></span>
+   <span class="icon-bar"></span>
+ </button>
+  <a class="navbar-brand navbar-collapse">    <% if current_user %>
+    <%= link_to "Home", root_path, class:"navbar-brand" %>
+    <% elsif current_doctor %>
+    <%= link_to "Home", root_path, class:"navbar-brand" %>
+    <% else %>
+    <%= link_to "DoctorApp", root_path, class:"navbar-brand" %>
+    <% end %></a>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link"><%= link_to "New User", new_user_registration_path %>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><%= link_to "User Login", new_user_session_path %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><%= link_to "New Doctor", new_doctor_registration_path %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><%= link_to "Doctor Login", new_doctor_session_path %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"> <% if current_user %>
+            <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+            <% elsif current_doctor %>
+            <%= link_to('Logout', destroy_doctor_session_path, method: :delete) %>
+            <% end %>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><% if current_user %>
+
+            <%= link_to "Inbox", mailbox_inbox_path %>
+
+            <% elsif current_doctor %>
+
+
+            <%= link_to "Inbox", mailbox_inbox_path %>
+            <% end %>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  </nav>

@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Doctorapp</title>
+
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
@@ -18,77 +18,9 @@
   <%= csrf_meta_tags %>
 
 </head>
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <% if current_user %>
-      <%= link_to "Home", root_path, class:"navbar-brand" %>
-      <% elsif current_doctor %>
-      <%= link_to "Home", root_path, class:"navbar-brand" %>
-      <% else %>
-      <%= link_to "DoctorApp", root_path, class:"navbar-brand" %>
-      <% end %>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="navbar-nav">
 
-        <li>
-          <%= link_to "New User", new_user_registration_path %>
-
-        </li>
-
-        <li>
-          <%= link_to "User Login", new_user_session_path %>
-        </li>
-
-        <li>
-          <%= link_to "New Doctor", new_doctor_registration_path %>
-
-        </li>
-
-        <li>
-          <%= link_to "Doctor Login", new_doctor_session_path %>
-        </li>
-        <% if current_user %>
-        <li>
-          <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-        </li>
-          <% elsif current_doctor %>
-          <li>
-          <%= link_to('Logout', destroy_doctor_session_path, method: :delete) %>
-
-        </li>
-        <% end %>
-        <% if current_user %>
-
-         <li><%= link_to "Inbox", mailbox_inbox_path %></li>
-
-         <% elsif current_doctor %>
-
-
-         <li><%= link_to "Inbox", mailbox_inbox_path %></li>
-         <% end %>
-
-
-
-
-
-
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
-  </div>
-  <!-- /.container -->
-</nav>
 <body>
+  <%= render 'home/header' %>
   <%= yield %>
 </body>
 </html>
