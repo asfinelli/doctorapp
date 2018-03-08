@@ -33,11 +33,11 @@ class ConversationsController < ApplicationController
 
   def reply
     if current_user
-      current_user.reply_to_conversation(conversation, params[:body])
+      current_user.reply_to_conversation(conversation, message_params[:body])
       flash[:notice] = "Your reply message was successfully sent!"
       redirect_to conversation_path(conversation)
     elsif current_doctor
-      current_doctor.reply_to_conversation(conversation, params[:body])
+      current_doctor.reply_to_conversation(conversation, message_params[:body])
       flash[:notice] = "Your reply message was successfully sent!"
       redirect_to conversation_path(conversation)
     end
@@ -67,6 +67,11 @@ class ConversationsController < ApplicationController
   def conversation_params
     params.require(:conversation).permit(:subject, :body,recipients:[])
   end
+
+    def message_params
+  params.require(:message).permit(:body, :subject)
+end
+
 
   def authenticate_all!
     if user_signed_in?
