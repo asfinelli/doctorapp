@@ -1,13 +1,17 @@
-<%= form_for @appointment do |f| %>
-<p>
 
+<%= render partial: 'show' %>
+  <% if current_doctor %>
+  <%= form_for @appointment do |f| %>
 
-
-<div class="field">
-  <%= f.label :doctor_id %><br />
-  <%= f.number_field :doctor_id, required: true, value: current_doctor.id %>
-</div>
   <p>
-    <%= f.submit 'Confirm' %>
-  </p>
-<% end %>
+
+    <div class="follow-up">
+      <%= f.label :follow_up %>
+      <%= f.text_field :follow_up, required: true %>
+    </div>
+      <p>
+      <%= f.submit 'Confirm' %>
+    </p>
+  <% end %>
+  <% end %>
+  </div>

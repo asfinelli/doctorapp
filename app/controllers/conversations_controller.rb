@@ -3,14 +3,13 @@ class ConversationsController < ApplicationController
 
 
   def new
+
   end
 
   def create
     if current_user
-      recipients = Doctor.where(id: conversation_params[:recipients])
-      conversation = current_user.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation
-      flash[:success] = "Your message was successfully sent!"
-      redirect_to conversation_path(conversation)
+      recipients = Doctor.find_by(id: params[:recipient_id])
+          conversation = current_user.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation
     elsif current_doctor
       recipients = User.where(id: conversation_params[:recipients])
       conversation = current_doctor.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation
@@ -18,6 +17,7 @@ class ConversationsController < ApplicationController
       redirect_to conversation_path(conversation)
     end
   end
+
 
   def show
     if current_user
@@ -64,6 +64,7 @@ class ConversationsController < ApplicationController
   end
 
   private
+
   def conversation_params
     params.require(:conversation).permit(:subject, :body,recipients:[])
   end

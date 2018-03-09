@@ -3,6 +3,7 @@ class AppointmentsController < ApplicationController
   before_action :authenticate_doctor!, only: [:edit, :update, :index]
   before_action :find_appointment, only: [:edit, :update, :show]
 
+
   def index
     @appointment = Appointment.where(doctor_id: nil)
 
@@ -17,14 +18,13 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new(appointment_params)
     @appointment.user_id = current_user.id
     if @appointment.save!
-      redirect_to appointment_path(@appointment)
+      redirect_to edit_appointment(@appointment)
     else
       render :new
     end
   end
 
   def show
-
   end
 
 
@@ -34,12 +34,14 @@ class AppointmentsController < ApplicationController
 
 
   def update
+
     appointment_params.merge(doctor_id: current_doctor)
     if @appointment.update(appointment_params)
-      redirect_to appointment_path(@appointment)
+      redirect_to root_path
     else
       render 'edit'
     end
+
   end
 
 
