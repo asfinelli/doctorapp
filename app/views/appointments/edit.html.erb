@@ -3,6 +3,10 @@
   <% if current_doctor %>
   <%= form_for @appointment do |f| %>
 
+  <div class="field">
+    <%= f.label :doctor_id %><br />
+    <%= f.hidden_field :doctor_id, required: true, value: current_doctor.id %>
+  </div>
   <p>
 
     <div class="follow-up">

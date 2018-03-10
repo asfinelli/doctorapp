@@ -1,7 +1,11 @@
 
 
-<h1> hello </h1>
-<h1> <%= @user.name %> </h1>
-<h1> <%= @user.email %> </h1>
-<%= link_to "new appointment", new_appointment_path %>
-<%= link_to "appointmnet history", user_sessions_path %>
+
+
+<div class="jumbotron">
+  <h1 class="display-4">Hello <%= @user.name %>  </h1>
+  <p class="lead"><%= link_to "new appointment", new_appointment_path %></p>
+  <hr class="my-4">
+  <p><%= link_to "appointmnet history", user_sessions_path %></p>
+
+</div>

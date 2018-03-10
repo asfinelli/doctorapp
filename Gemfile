@@ -5,8 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'figaro'
-gem 'opentok', '~> 2.3', '>= 2.3.4'
+gem "opentok", "~> 3.0.2"
+gem 'rails_admin'
 gem 'chosen-rails', '~> 1.5', '>= 1.5.2'
 gem 'devise'
 gem 'jquery-rails'
