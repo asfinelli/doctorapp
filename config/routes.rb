@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
 
+  get 'doctors/index'
+
+  get 'doctors/show'
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :doctors
 
   devise_for :users
-
+  resources :doctors
 
   authenticated :user do
     root to: 'user_sessions#show'
@@ -14,7 +18,6 @@ Rails.application.routes.draw do
   authenticated :doctor do
     root to: 'doctor_sessions#show'
   end
-
 
 
   resources :user_sessions

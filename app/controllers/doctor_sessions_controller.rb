@@ -7,4 +7,5 @@ class DoctorSessionsController < ApplicationController
   def index
     @appointment = Appointment.where(doctor_id: current_doctor.id)
   end
+
 end

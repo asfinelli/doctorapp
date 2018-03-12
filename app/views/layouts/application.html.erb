@@ -18,18 +18,20 @@
   <%= csrf_meta_tags %>
 
 </head>
+<% if current_doctor.try(:admin?) %>
+<%= render 'home/admin' %>
+<% elsif current_doctor %>
+<%= render 'home/doctor' %>
+<% elsif current_user %>
+<%= render 'home/user' %>
+<% else %>
 
+<%= render 'home/header' %>
+
+<% end %>
 <body>
-  <% if current_doctor.try(:admin?) %>
-  <%= render 'home/admin' %>
-  <% elsif current_doctor %>
-  <%= render 'home/doctor' %>
-  <% elsif current_user %>
-  <%= render 'home/user' %>
-  <% else %>
 
-  <%= render 'home/header' %>
   <%= yield %>
-  <% end %>
+
 </body>
 </html>
