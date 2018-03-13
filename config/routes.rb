@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   devise_for :doctors
 
   devise_for :users
-  resources :doctors
+  resources :users
+
 
   authenticated :user do
     root to: 'user_sessions#show'
