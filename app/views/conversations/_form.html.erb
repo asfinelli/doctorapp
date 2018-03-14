@@ -2,8 +2,7 @@
     <div class="form-group">
     <% if current_user %>
 
-    <%= f.label :recipients %>
-<%= hidden_field_tag(:recipient_id, "#{@doctor.id}") %>
+  <%= f.select(:recipients, Doctor.all.collect {|p| [ p.username, p.id ] }, {}, { multiple: true, class: "chosen-select form-control" })%>
 
     <% elsif current_doctor %>
 

@@ -1,0 +1,7 @@
+
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+
+<% @users.each do |user| %>
+<%= link_to "#{user.name}", user_path(user) %>
+<% end %>

@@ -8,10 +8,18 @@ class User < ApplicationRecord
   :recoverable, :rememberable, :trackable, :validatable
 
   def mailboxer_name
-  self.name
-end
+    self.name
+  end
 
-def mailboxer_email(object)
-  self.email
-end
+  def mailboxer_email(object)
+    self.email
+  end
+
+  def self.search(search)
+    if search
+      where('name LIKE ?', "%#{search}%")
+    else
+      all
+    end
+  end
 end

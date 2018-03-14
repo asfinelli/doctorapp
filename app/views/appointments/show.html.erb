@@ -1,8 +1,9 @@
-<div align="middle">
+<button>
+<%= link_to "End Visit", root_path %>
+</button>
+<div class="video-container">
 <iframe
   src="https://tokbox.com/embed/embed/ot-embed.js?embedId=ae301120-4da4-498c-b9dc-9f27b033db49&room=<%= @appointment.id %>&iframe=true"
-  width=600em
-  height=500em
+
   allow="microphone; camera"
-></iframe>
-<%= link_to "End Visit", root_path %>
+></iframe><br /></div>

@@ -16,8 +16,8 @@
 
 
   <%= csrf_meta_tags %>
+<nav>
 
-</head>
 <% if current_doctor.try(:admin?) %>
 <%= render 'home/admin' %>
 <% elsif current_doctor %>
@@ -25,10 +25,11 @@
 <% elsif current_user %>
 <%= render 'home/user' %>
 <% else %>
-
 <%= render 'home/header' %>
 
 <% end %>
+</nav>
+</head>
 <body>
 
   <%= yield %>
