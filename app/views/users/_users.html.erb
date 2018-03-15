@@ -2,10 +2,13 @@
 
 <%= hidden_field_tag :direction, params[:direction] %>
 <%= hidden_field_tag :sort, params[:sort] %>
-<div style="text-docration:none;">
+<div style="text-docration:none;float:left;">
 
 
   <% @users.each do |user| %>
+  <ul>
   <%= link_to "#{user.name}", user_path(user), remote: true, id: "profile" %>
+
+</ul>
   <% end %>
 </div>

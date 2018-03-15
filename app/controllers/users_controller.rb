@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :authenticate_doctor!
 
   def index
-    @users = User.search(params[:search]).order(:name).paginate(:per_page => 5, :page => params[:page])
+    @users = User.search(params[:search]).order(:name).paginate(:per_page => 10, :page => params[:page])
   end
 
 
