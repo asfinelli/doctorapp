@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.search(params[:search]).order(:name).paginate(:per_page => 5, :page => params[:page])
-
   end
 
 
@@ -15,4 +14,4 @@ class UsersController < ApplicationController
       format.js
     end
   end
-  end
+end

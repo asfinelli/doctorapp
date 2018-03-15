@@ -6,7 +6,6 @@ class AppointmentsController < ApplicationController
 
   def index
     @appointment = Appointment.where(doctor_id: nil)
-
   end
 
   def new
@@ -29,7 +28,6 @@ class AppointmentsController < ApplicationController
 
 
   def edit
-
   end
 
 
@@ -41,7 +39,6 @@ class AppointmentsController < ApplicationController
     else
       render 'edit'
     end
-
   end
 
 

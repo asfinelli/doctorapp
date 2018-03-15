@@ -1,10 +1,9 @@
 
 
 <%= form_tag users_path, :method => 'get', :user_id => "users_search" do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-
-<button type="submit" class="btn btn-primary btn-sm">Search</button>
+<p>
+  <%= text_field_tag :search, params[:search] %>
+  <button type="submit" class="btn btn-primary btn-sm">Search</button>
 </p>
 <div id="users"><%= render 'users' %></div>
 <% end %>

@@ -6,12 +6,12 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :password_confirmation, :username, :name, :dob, :phone_number, :gender, :address, :city, :state, :postal_code, :country, :admin])
   end
-
+  
   private
 
   def conversation
-   @conversation ||= mailbox.conversations.find(params[:id])
- end
+    @conversation ||= mailbox.conversations.find(params[:id])
+  end
 
   def mailbox
     if user_signed_in?
