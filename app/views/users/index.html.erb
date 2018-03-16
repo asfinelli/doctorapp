@@ -1,14 +1,10 @@
-<div class="container-fluid">
-  <div class="text-center">
 
-<%= form_tag users_path, :method => 'get', :user_id => "users_search" do %>
-<p>
-  <%= text_field_tag :search, params[:search] %>
-  <button type="submit" class="btn btn-primary btn-sm">Search</button>
-
-  <%= link_to "Cancel", :back, class:"btn btn-primary btn-sm" %>
-</p>
-<div id="users"><%= render 'users' %></div>
-<% end %>
+<div id="content">
+<div id="left">
+      <p><% @users.each do |user| %></p>
+      <%= link_to "#{user.name}", user_path(user), remote: true %>
+      <% end %>
 </div>
-<div>
+<div id="profile">
+  <%= yield  %>
+</div>

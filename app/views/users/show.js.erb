@@ -1,1 +1,1 @@
-$('#profile').html("<%= j render(partial: 'show') %>");
+$("#profile").html("<%= escape_javascript(render("show")) %>");
