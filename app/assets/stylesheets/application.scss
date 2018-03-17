@@ -19,8 +19,12 @@
 @import "chosen";
 
 body {
-background-image: url(background.jpg);
-color: #778899;}
+  background: image-url('background.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 .navbar {
   background-color: #191970;
