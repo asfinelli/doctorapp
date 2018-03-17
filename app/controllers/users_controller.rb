@@ -11,7 +11,6 @@ end
 
 
   def show
-
     @user = User.find(params[:id])
     @appointments = @user.appointments.collect
     respond_to do |format|

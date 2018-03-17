@@ -18,6 +18,9 @@
 @import "bootstrap";
 @import "chosen";
 
+body {
+background-image: url(background.jpg);
+color: #778899;}
 
 .navbar {
   background-color: #191970;
@@ -50,14 +53,14 @@ body {
    display: block;
    text-align: center;
    margin-right: 0.5em;
-
+   color: #778899;
  }
 
  .jumbotron{
-
+   background-color: transparent !important;
    display: block;
    text-align: center;
    margin-right: 0.5em;
-   background-color: #FFF5EE;
+   color: white;
 
  }
