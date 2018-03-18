@@ -1,7 +1,7 @@
 
 
 
-  <h2>Patient Information</h2>
+  <h2 class="titles">Patient Information</h2>
   <ul class="list-group">
 
     <li class="list-group-item">Name: <%= @user.name %></li>
@@ -21,7 +21,7 @@
 
 
 
-    <h2>Appointment History</h2>
+  <h2 class="titles">Appointment History</h2>
     <% @appointments.each do |appointment| %>
   <ul class="list-group">
     <li class="list-group-item">Date: <%= appointment.created_at %></li>
