@@ -7,41 +7,54 @@
 
 <div class="field">
   <%= f.label :name %><br />
+  <div class="input">
   <%= f.text_field :name, autofocus: true, required: true %>
+</div>
 </div>
 
 
 <div class="field">
   <%= f.label :dob %><br />
+    <div class="input">
   <%= f.date_field :dob, autofocus: true, required: true %>
+</div>
 </div>
 
 
 <div class="field">
 <%= f.label :gender %><br />
+  <div class="input">
 <%= f.text_field :gender, autofocus: true, required: true %>
+</div>
 </div>
 
 
 <div class="field">
   <%= f.label :phone_number %><br />
+    <div class="input">
   <%= f.phone_field :phone_number, autofocus: true, required: true %>
+</div>
 </div>
 
 
 <div class="field">
   <%= f.label :address %><br />
+    <div class="input">
   <%= f.text_field :address, autofocus: true, required: true %>
+</div>
 </div>
 
 
 <div class="field">
   <%= f.label :city %><br />
+    <div class="input">
   <%= f.text_field :city, autofocus: true, required: true %>
+</div>
 </div>
 
 <div class="field">
   <%= f.label :state%><br />
+    <div class="input">
   <%= f.label :state, label: {text: "Country"} do %>
   <%= f.select :state, {State: %w(
 Alabama
@@ -97,17 +110,20 @@ Wisconsin
 Wyoming), prompt: 'Please select a country'}, class: 'form-control' %>
 
 <% end %>
-
+</div>
 </div>
 
 
 <div class="field">
     <%= f.label :postal_code %><br />
+      <div class="input">
     <%= f.text_field :postal_code, autofocus: true, required: true %>
+  </div>
   </div>
 
   <div class="field"style="text-align:center;">
     <%= f.label :country %><br />
+      <div class="input">
     <%= f.label :country, label: {text: "Country"} do %>
     <%= f.select :country, {Country: %w(UnitedStates
 Afghanistan
@@ -309,18 +325,23 @@ Zimbabwe), prompt: 'Please select a country'}, class: 'form-control' %>
 
 <% end %>
 </div>
+</div>
 
 
 
 <div class="field">
   <%= f.label :email %><br />
+    <div class="input">
   <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+</div>
 </div>
 
 
 <div class="field">
   <%= f.label :username %><br />
+    <div class="input">
   <%= f.text_field :username %>
+</div>
 </div>
 
 
@@ -329,16 +350,22 @@ Zimbabwe), prompt: 'Please select a country'}, class: 'form-control' %>
   <% if @minimum_password_length %>
   <em>(<%= @minimum_password_length %> characters minimum)</em>
   <% end %><br />
+  <div class="input">
   <%= f.password_field :password, autocomplete: "off" %>
+</div>
 </div>
 
 
 <div class="field">
   <%= f.label :password_confirmation %><br />
+  <div>
   <%= f.password_field :password_confirmation, autocomplete: "off" %>
+</div>
 </div>
 
 <div class="actions">
+    <div class="input">
   <%= f.submit "Sign up" %>
+</div>
 </div>
 <% end %>

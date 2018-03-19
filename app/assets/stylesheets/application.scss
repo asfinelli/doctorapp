@@ -45,12 +45,16 @@ body {
      background-color: #FFF5EE;
      /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
  }
+
+ .input {
+   color:black;
+ }
  .field{
 
    display: block;
    text-align: center;
    margin-right: 0.5em;
-
+    color: white;
  }
 
  .actions{
