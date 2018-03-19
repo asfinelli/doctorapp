@@ -7,13 +7,15 @@ class ConversationsController < ApplicationController
 
   def create
     if current_user
-      recipients = Doctor.find_by(id: params[:recipient_id])
+      recipients = Doctor.where(id: conversation_params[:recipients])
       conversation = current_user.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation
+      flash[:success] = "Your message was successfully sent!"
+      redirect_to conversation_path(conversation)
     elsif current_doctor
       recipients = User.where(id: conversation_params[:recipients])
       conversation = current_doctor.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation
       flash[:success] = "Your message was successfully sent!"
-      redirect_to conversation_path(conversation.id)
+      redirect_to conversation_path(conversation)
     end
   end
 
