@@ -23,6 +23,9 @@ ActiveRecord::Schema.define(version: 20180310191739) do
     t.string "blood_pressure"
     t.string "temperature"
     t.string "medications"
+    t.string "appointment_followup"
+    t.string "prescription"
+    t.string "followup"
     t.string "prescriptions"
     t.text "follow_up"
     t.datetime "created_at", null: false

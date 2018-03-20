@@ -44,6 +44,8 @@ class AppointmentsController < ApplicationController
 
   private
 
+
+
   def find_appointment
     @appointment = Appointment.find(params[:id])
   end

@@ -9,7 +9,6 @@ gem 'em-hiredis'
 gem 'redis'
 gem 'figaro'
 gem 'will_paginate', '~> 3.1.0'
-
 gem "carmen-rails"
 gem "opentok", "~> 3.0.2"
 gem 'rails_admin'

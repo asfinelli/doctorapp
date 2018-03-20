@@ -2,23 +2,38 @@
 
 <div class="field">
   <%= f.label :name %><br />
+  <div class="input">
+
   <%= f.text_field :name, autofocus: true, required: true, value: current_user.name %>
+</div>
 </div>
 <div class="field">
   <%= f.label :symptoms %><br />
+  <div class="input">
+
   <%= f.text_area :symptoms, autofocus: true, required: true %>
+</div>
 </div>
 <div class="field">
   <%= f.label :blood_pressure %><br />
+  <div class="input">
+
   <%= f.text_field :blood_pressure, autofocus: true, required: true %>
+</div>
 </div>
 <div class="field">
   <%= f.label :temperature %><br />
+  <div class="input">
+
   <%= f.text_field :temperature, autofocus: true, required: true %>
+</div>
 </div>
 <div class="field">
   <%= f.label :medications %><br />
+  <div class="input">
+
   <%= f.text_field :medications, autofocus: true, required: true %>
+</div>
 </div>
 <div class="actions">
   <%= f.submit "submit" %>
