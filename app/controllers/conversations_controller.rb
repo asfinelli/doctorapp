@@ -3,21 +3,34 @@ class ConversationsController < ApplicationController
 
 
   def new
-  end
-
-  def create
     if current_user
-      recipients = Doctor.where(id: conversation_params[:recipients])
-      conversation = current_user.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation
-      flash[:success] = "Your message was successfully sent!"
-      redirect_to conversation_path(conversation)
+      @doctor = Doctor.find_by(id: params[:recipient_id])
     elsif current_doctor
-      recipients = User.where(id: conversation_params[:recipients])
-      conversation = current_doctor.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation
-      flash[:success] = "Your message was successfully sent!"
-      redirect_to conversation_path(conversation)
+      @user = User.find_by(id: params[:recipient_id])
     end
-  end
+
+    def create
+      if current_user
+        recipients = Doctor.find_by(id: params[:recipient_id])
+        conversation = current_user.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation
+        flash[:success] = "Your message was successfully sent!"
+        respond_to do |format|
+          format.html {redirect_to conversation_path(conversation)}
+          format.js
+        end
+
+        elsif current_doctor
+          recipients = User.find_by(id: params[:recipient_id])
+          conversation = current_doctor.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation
+          flash[:success] = "Your message was successfully sent!"
+          respond_to do |format|
+            format.html {redirect_to conversation_path(conversation)}
+            format.js
+          end
+        end
+      end
+    end
+
 
 
   def show

@@ -4,11 +4,13 @@
   <% @appointment.all.sort_by(&:created_at).each do |a| %>
   <% if a.follow_up == nil %>
   <ul class="list-group">
-    <li class="list-group-item">Date: <%= a.name %></li>
-    <li class="list-group-item">Name: <%= a.symptoms %></li>
+    <li class="list-group-item">Name: <%= a.user.name %></li>
+
+    <li class="list-group-item">Date: <%= a.created_at %></li>
+    <li class="list-group-item">Symptoms: <%= a.symptoms %></li>
     <li class="list-group-item">Symptoms: <%= a.blood_pressure %></li>
-    <li class="list-group-item">Doctor Email: <%= a.temperature %></li>
-    <li class="list-group-item">Doctor Follow Up: <%= a.medications %></li>
+    <li class="list-group-item">Temperature: <%= a.temperature %></li>
+    <li class="list-group-item">Medications: <%= a.medications %></li>
     <li class="list-group-item"><%= link_to "Accept Appointment", edit_appointment_path(a.id) %></li>
   </ul>
   <% end %>

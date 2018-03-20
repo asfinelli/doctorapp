@@ -7,5 +7,6 @@ class UserSessionsController < ApplicationController
 
   def index
     @appointment = Appointment.where(user_id: current_user.id).where.not(doctor_id: nil )
+
   end
 end
