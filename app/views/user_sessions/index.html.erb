@@ -1,8 +1,5 @@
 
-
-
 <div class="container">
-
   <% @appointment.all.sort_by(&:created_at).each do |appointment| %>
   <ul class="list-group">
     <li class="list-group-item">Date: <%= appointment.created_at %></li>
