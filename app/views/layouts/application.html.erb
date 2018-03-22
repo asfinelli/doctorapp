@@ -16,7 +16,7 @@
   <%= stylesheet_link_tag "shadowbox" %>
 
   <%= csrf_meta_tags %>
-  <% unless controller.controller_name == "conversations" && controller.action_name == "new" || controller.action_name == "index" %>
+  <% unless controller.controller_name == "conversations" && controller.action_name == "new" %>
 <nav>
 
 <% if current_doctor.try(:admin?) %>
