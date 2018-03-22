@@ -4,6 +4,10 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+
+gem 'jquery-ui-rails'
+
+gem 'shadowbox-rails', '~> 0.0.4'
 gem 'hirb'
 gem 'em-hiredis'
 gem 'redis'

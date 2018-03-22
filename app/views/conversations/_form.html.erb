@@ -1,8 +1,10 @@
+<body onload="window.close()">
+
 <%= form_for :conversation, url: :conversations, html: { class: "" } do |f| %>
 <div class="form-group">
   <% if current_user %>
 
-  <%= f.label :recipients %>
+
   <%= hidden_field_tag(:recipient_id, "#{@doctor.id}") %>
 
   <% elsif current_doctor %>
@@ -13,14 +15,19 @@
   <% end %>
 </div>
 <div class="form-group">
+  <div class="field">
   <%= f.label :subject %>
+</div>
   <%= f.text_field :subject, placeholder: "Subject", class: "form-control" %>
 </div>
 <div class="form-group">
+  <div class="field">
   <%= f.label :message %>
+</div>
   <%= f.text_area :body, class: 'form-control',placeholder: "Type your message here", rows: 4  %>
 </div>
 
 <%= f.submit "Send Message", class: "btn btn-success" %>
 
 <% end %>
+</body>

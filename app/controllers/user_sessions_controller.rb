@@ -7,6 +7,9 @@ class UserSessionsController < ApplicationController
 
   def index
     @appointment = Appointment.where(user_id: current_user.id).where.not(doctor_id: nil )
-
+    respond_to do |format|
+      format.html # show.html.erb
+      format.js
+    end
   end
 end

@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :doctors, through: :appointments
   acts_as_messageable
   before_save :capitalize_names
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -19,9 +20,9 @@ class User < ApplicationRecord
     self.email
   end
 
-  def self.search(search)
+  def self.search(term)
     if search
-      where('name LIKE ?', "%#{search}%")
+      where('LOWER(name) LIKE :term', term: "%#{term.downcase}%")
     else
       all
     end

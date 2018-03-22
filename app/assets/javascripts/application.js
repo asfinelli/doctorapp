@@ -14,6 +14,8 @@
 //= require chosen-jquery
 //= require conversations
 //= require turbolinks
+//= require shadowbox
+//= require jquery-ui/autocomplete
 //= require bootstrap-sprockets
 
 //= require_tree .

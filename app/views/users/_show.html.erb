@@ -13,7 +13,7 @@
     <li class="list-group-item">Postal Code: <%= @user.postal_code %></li>
     <li class="list-group-item">Country:<%= @user.country %></li>
       <li class="list-group-item">Gender:<%= @user.gender %></li>
-  <li class="list-group-item">Doctor Follow Up: <%= link_to "contact", new_conversation_path(recipient_id: @user.id)%></li>
+  <li class="list-group-item">Doctor Follow Up: <%= link_to "contact", new_conversation_path(recipient_id: @user.id) rel: 'shadowbox;width=500;height=300;'%></li>
 
   </ul>
 
