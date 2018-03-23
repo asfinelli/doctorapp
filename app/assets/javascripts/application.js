@@ -13,8 +13,8 @@
 //= require jquery_ujs
 //= require chosen-jquery
 //= require conversations
-//= require turbolinks
 //= require shadowbox
+//= require turbolinks
 //= require jquery-ui/autocomplete
 //= require bootstrap-sprockets
 
