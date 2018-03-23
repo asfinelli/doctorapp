@@ -12,16 +12,13 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-
 //= require chosen-jquery
 //= require conversations
 //= require shadowbox
-
-
 //= require jquery-ui/autocomplete
 //= require bootstrap-sprockets
-
 //= require_tree .
+
 // $(function() {
 //   $("#users th a, #users .pagination a").live("click", function() {
 //     $.getScript(this.href);

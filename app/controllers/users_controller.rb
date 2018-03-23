@@ -6,15 +6,8 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.js
+    end
   end
-end
-
-def search
-  respond_to do |format|
-    format.html
-    format.json { @users = User.search(params[:term]) }
-  end
-end
 
 
   def show

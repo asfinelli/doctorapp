@@ -4,9 +4,9 @@ Rails.application.routes.draw do
 
   get 'doctors/show'
 
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :doctors
 
+  devise_for :doctors
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   resources :users
 
