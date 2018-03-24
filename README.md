@@ -1,6 +1,6 @@
 This app is a doctor virtual visits app.  
 
-The application can be found at myvirtualvisit.com.  
+The application can be found at myvirtualappointment.com.  
 
 It is hosted using a AWS elastic bean stalk.  
 
