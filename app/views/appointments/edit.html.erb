@@ -1,11 +1,10 @@
 
-
 <% if current_doctor %>
-<div align="middle">
-  <iframe
+<div class="video-container" align="middle">
+<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item"
+
   src="https://tokbox.com/embed/embed/ot-embed.js?embedId=ae301120-4da4-498c-b9dc-9f27b033db49&room=<%= @appointment.id %>&iframe=true"
-  width=600em
-  height=500em
+
   allow="microphone; camera"
   ></iframe>
 </div>

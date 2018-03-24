@@ -28,11 +28,10 @@ class AppointmentsController < ApplicationController
 
 
   def edit
-  end
 
+end
 
   def update
-
     appointment_params.merge(doctor_id: current_doctor)
     if @appointment.update(appointment_params)
       redirect_to root_path
