@@ -77,8 +77,12 @@ class ConversationsController < ApplicationController
     end
   end
 
-  private
 
+def index
+
+end
+
+  private
   def conversation_params
     params.require(:conversation).permit(:subject, :body,recipients:[])
   end
