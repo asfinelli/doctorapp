@@ -29,3 +29,12 @@
 //     return false;
 //   });
 // });
+
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $(".drew").hide();
+    });
+    $("#show").click(function(){
+    $(".drew").show();
+});
+});
