@@ -15,7 +15,20 @@
       <ul class="navbar-nav">
 
         <li class="nav-item">
-          <a class="nav-link"><%= link_to "User Login", new_user_session_path %></a>
+          <a id="login">User Login</a>
+
+          <%= form_for(:user, :url => session_path(:user), html: { class: "navbar-form navbar-right form-inline" }) do |f| %>
+          <div class="drew1">
+        <div class="form-group">
+          <%= f.text_field :email, :placeholder => "Email", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.password_field :password, :placeholder => "Password", class: "form-control"  %>
+        </div>
+
+        <%= f.submit 'Login', class: "btn btn-default" %>
+<% end %>
+</div>
         </li>
 
         <li class="nav-item">

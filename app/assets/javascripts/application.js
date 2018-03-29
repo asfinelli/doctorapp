@@ -34,4 +34,7 @@ $(document).ready(function(){
     $("#show").click(function(){
     $(".drew").show();
 });
+$("#login").click(function(){
+$(".drew1").show();
+});
 });
