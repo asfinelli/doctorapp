@@ -4,14 +4,16 @@
   <p class="lead">Where you can see a doctor in flash</p>
   <hr class="my-4">
   <p>Join today to see what all the hype is about!</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" <%= link_to "New User", new_user_registration_path %></a>
-  </p>
-<div class="drew">
-  <h1>drew</h1>
 
-  </div>
-  <button id="hide">Hide</button>
-  <button id="show">Show</button>
+  <p class="lead">
+
+    <a id="show" class="btn btn-primary btn-lg">New User</a>
+
+  </p>
+  <div class="drew">
+    <%= render "users/registrations/new" %>
+
+    </div>
+
 
 </div>
