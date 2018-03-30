@@ -11,6 +11,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable
 
+
+
   def capitalize_names
     self.name = name.camelcase
   end
