@@ -13,7 +13,7 @@
         <li class="nav-item">
           <a id="login">User Login</a>
           <%= form_for(:user, :url => session_path(:user), html: { class: "navbar-form navbar-right form-inline col-xs-2" }) do |f| %>
-          <div class="drew1">
+          <div class="user-login">
 
             <div class="form-group">
               <%= f.text_field :email, :placeholder => "Email", class: "form-control input-sm" %>

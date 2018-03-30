@@ -32,15 +32,18 @@
 
 $(document).ready(function(){
   $("#show").click(function(){
-    $(".drew").toggle();
+    $(".sign-up").toggle();
 
   });
   $("#login").click(function(){
-    $(".drew1").toggle();
+    $(".user-login").toggle();
 
 
   });
   $("#doctor-login").click(function(){
     $(".doc-login").toggle();
   });
+  $("#show").click(function(){
+    $(".jumbotron").toggle();
+});
 });
