@@ -9,7 +9,7 @@ module ApplicationHelper
   end
 
   def devise_mapping
-    @devise_mapping ||= Devise.mappings[:user]
+    @devise_mapping ||= Devise.mappings[:user, :doctor]
   end
 
   def active_page(active_page)

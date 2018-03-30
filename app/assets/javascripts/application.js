@@ -31,10 +31,16 @@
 // });
 
 $(document).ready(function(){
-    $("#show").click(function(){
-    $(".drew").show();
-});
-$("#login").click(function(){
-$(".drew1").show();
-});
+  $("#show").click(function(){
+    $(".drew").toggle();
+
+  });
+  $("#login").click(function(){
+    $(".drew1").toggle();
+
+
+  });
+  $("#doctor-login").click(function(){
+    $(".doc-login").toggle();
+  });
 });
