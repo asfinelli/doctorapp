@@ -13,7 +13,7 @@
         <li class="nav-item">
           <a id="login">User Login</a>
           <%= form_for(:user, :url => session_path(:user), html: { class: "navbar-form navbar-right form-inline col-xs-1" }) do |f| %>
-          <div class="user-login">
+          <div class="user-login" style="margin-top:0;">
 
             <div class="form-group">
               <%= f.text_field :username, :placeholder => "Username", class: "form-control input-sm" %>
@@ -40,6 +40,7 @@
             <%= f.submit 'Login', class: "btn btn-sm" %>
             <% end %>
           </div>
+          <% link_to 'doctor', new_doctor_registration_path %>
 
         </li>
       </ul>
