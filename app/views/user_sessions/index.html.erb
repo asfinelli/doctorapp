@@ -9,8 +9,5 @@
     <li class="list-group-item">Doctor Follow Up: <%= appointment.follow_up %></li>
     <li class="list-group-item">Doctor Follow Up: <%= link_to "contact", new_conversation_path(recipient_id: appointment.doctor.id), rel: 'shadowbox;width=500;height=300;' %>
   </ul>
-
-
-
   <% end %>
 </div>

@@ -1,5 +1,5 @@
 <div class="jumbotron">
-  <h1 class="display-4">Hello <%= @user.name %>  </h1>
+  <h1 class="display-4">Hello <%= @user.name %> <%= @user.last_name %>  </h1>
   <p class="lead"><%= link_to "New Appointment", new_appointment_path %></p>
   <hr class="my-4">
   <p><%= link_to "Appointment History", user_sessions_path %></p>
