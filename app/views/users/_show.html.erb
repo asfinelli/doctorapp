@@ -14,13 +14,7 @@
     <li class="list-group-item">Country:<%= @user.country %></li>
       <li class="list-group-item">Gender:<%= @user.gender %></li>
 
-
   </ul>
-
-
-
-
-
   <h2 class="titles">Appointment History</h2>
     <% @appointments.each do |appointment| %>
   <ul class="list-group">
@@ -30,5 +24,4 @@
     <li class="list-group-item">User Email: <%= appointment.user.email %></li>
     <li class="list-group-item">Doctor Follow Up: <%= appointment.follow_up %></li>
   </ul>
-
 <% end %>
