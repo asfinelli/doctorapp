@@ -12,34 +12,29 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <a id="login">User Login</a>
-          <%= form_for(:user, :url => session_path(:user), html: { class: "navbar-form navbar-right form-inline col-xs-1" }) do |f| %>
+          <%= form_for(:user, :url => session_path(:user), html: { class: "navbar-form navbar-right form-inline mr-sm-2" }) do |f| %>
           <div class="user-login" style="margin-top:0;">
-
-            <div class="form-group">
               <%= f.text_field :username, :placeholder => "Username", class: "form-control input-sm" %>
-            </div>
-            <div class="form-group">
               <%= f.password_field :password, :placeholder => "Password", class: "form-control input-sm"  %>
-            </div>
             <%= f.submit 'Login', class: "btn btn-sm" %>
             <% end %>
-          </div>
+</div>
 
         </li>
         <li class="nav-item">
           <a id="doctor-login">Doctor Login</a>
-          <%= form_for(:doctor, :url => session_path(:doctor), html: { class: "navbar-form navbar-right form-inline col-xs-2" }) do |f| %>
+          <%= form_for(:doctor, :url => session_path(:doctor), html: { class: "navbar-form navbar-right form-inline mr-sm-2" }) do |f| %>
           <div class="doc-login">
-
-            <div class="form-group">
               <%= f.text_field :username, :placeholder => "Username", class: "form-control input-sm" %>
-            </div>
-            <div class="form-group">
+
+
               <%= f.password_field :password, :placeholder => "Password", class: "form-control input-sm"  %>
-            </div>
+
             <%= f.submit 'Login', class: "btn btn-sm" %>
             <% end %>
-          </div>
+
+</div>
+
 
         </li>
       </ul>
