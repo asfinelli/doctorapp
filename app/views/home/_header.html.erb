@@ -9,34 +9,36 @@
       <%= link_to "MyVirtualAppointment", root_path, class:"navbar-brand" %>
     </a>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a id="login">User Login</a>
+          <a class= "nav-link" style="maring-left:0;" id="login">User Login</a>
           <%= form_for(:user, :url => session_path(:user), html: { class: "navbar-form navbar-right form-inline mr-sm-2" }) do |f| %>
           <div class="user-login" style="margin-top:0;">
-              <%= f.text_field :username, :placeholder => "Username", class: "form-control input-sm" %>
-              <%= f.password_field :password, :placeholder => "Password", class: "form-control input-sm"  %>
+            <%= f.text_field :username, :placeholder => "Username", class: "form-control input-sm" %>
+            <%= f.password_field :password, :placeholder => "Password", class: "form-control input-sm"  %>
             <%= f.submit 'Login', class: "btn btn-sm" %>
-            <% end %>
-</div>
 
-        </li>
+          </div>
+          </li>
+  <% end %>
+
         <li class="nav-item">
-          <a id="doctor-login">Doctor Login</a>
+          <a class="nav-link" id="doctor-login">Doctor Login</a>
           <%= form_for(:doctor, :url => session_path(:doctor), html: { class: "navbar-form navbar-right form-inline mr-sm-2" }) do |f| %>
           <div class="doc-login">
-              <%= f.text_field :username, :placeholder => "Username", class: "form-control input-sm" %>
+            <%= f.text_field :username, :placeholder => "Username", class: "input-sm"%>
 
 
-              <%= f.password_field :password, :placeholder => "Password", class: "form-control input-sm"  %>
+            <%= f.password_field :password, :placeholder => "Password", class: "input-sm"  %>
 
             <%= f.submit 'Login', class: "btn btn-sm" %>
-            <% end %>
-
-</div>
 
 
-        </li>
+          </div>
+          </li>
+<% end %>
+
+
       </ul>
     </div>
   </div>
